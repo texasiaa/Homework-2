@@ -1,0 +1,5 @@
+Python packages:
+1. BeautifullSoup4
+2. Requests
+3. Pandas
+4. hlxl
