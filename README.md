@@ -13,6 +13,6 @@ There are files, which we worked on. They divided to groups:
 
 ## Technologies
 Project is created with:
-* 
+* Python 3.8
 * 
 * 
