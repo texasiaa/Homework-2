@@ -7,7 +7,7 @@ from flask import Flask, jsonify, request
 # our API_TOKEN
 API_TOKEN = "prymaty"
 # RSA_KEY from https://weather.visualcrossing.com
-RSA_KEY = "TOKEN"
+RSA_KEY = "RSA_KEY"
 
 app = Flask(__name__)
 
