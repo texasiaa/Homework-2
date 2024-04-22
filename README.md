@@ -21,5 +21,8 @@ Project is created with:
 * Scikit-learn
 * Flask
 * Nltk
+* Hlxl
+* BeautifulSoup4
+* Requests 2.31.0
 
 
