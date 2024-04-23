@@ -24,5 +24,6 @@ Project is created with:
 * Hlxl
 * BeautifulSoup4
 * Requests 2.31.0
+* Cors
 
 
