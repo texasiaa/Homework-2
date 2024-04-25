@@ -160,8 +160,8 @@ def get_words_vect():
 
 def get_weather_response():
     url_base_url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline"
-    RSA_KEY = "FY62VLWDPNHH845BSLWHAFTVQ"
-    API_TOKEN = "prymaty"
+    RSA_KEY = ""
+    API_TOKEN = ""
     location = "Kyiv"
     date = "next24hours"
     url_api_version = "v1"
