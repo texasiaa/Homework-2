@@ -131,9 +131,8 @@ function getData() {
     .then(response => response.json())
     .then(data => {
 
-        var currentHour = new Date().getHours();
         var selectedHour = parseInt(document.getElementById('timeRange').value);
-        var index = (currentHour + selectedHour) % 24;
+        var index = selectedHour;
         var alarmProbability = data[index].float[1];
         var probabilityPercentage = (alarmProbability * 100).toFixed(2) + '%';
         document.getElementById('proba').innerText = probabilityPercentage;
