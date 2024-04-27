@@ -369,3 +369,56 @@ line-height: 9vh;
     color: #2e94b9;
     position: relative;
 }
+
+/* flashlight */
+.shadow {
+    position: fixed;
+    width: 200vw;
+    height: 200vh;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-image: radial-gradient(circle at center, transparent, #000 15%);
+    z-index: 200;
+    pointer-events: none;
+}
+
+/* night mode button */
+#night-mode {
+    position: fixed;
+    top: 35px;
+    left: 100px; 
+    width: 50px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: #ccc;
+}
+
+#night-mode input[type="checkbox"] {
+    display: none;
+}
+
+#night-mode label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px; 
+    height: 25px; 
+    border-radius: 50%;
+    background-color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#night-mode input[type="checkbox"]:checked + label {
+    left: 25px; 
+}
+
+.night-mode-label {
+    position: fixed;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 600;
+    left: 170px;
+    font-weight: bolder;
+}
