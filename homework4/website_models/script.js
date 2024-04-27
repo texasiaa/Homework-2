@@ -119,7 +119,7 @@ btn.addEventListener('click', evt => {
 function getData() {
     var selectedRegion = document.querySelector('.button_region.active').textContent;
 
-    fetch('http://public_IPv4_address:port/prediction', {
+    fetch('http://51.20.189.23:8000/prediction', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -131,8 +131,9 @@ function getData() {
     .then(response => response.json())
     .then(data => {
 
+        // var currentHour = new Date().getHours();
         var selectedHour = parseInt(document.getElementById('timeRange').value);
-        var index = selectedHour;
+        var index = selectedHour -1;
         var alarmProbability = data[index].float[1];
         var probabilityPercentage = (alarmProbability * 100).toFixed(2) + '%';
         document.getElementById('proba').innerText = probabilityPercentage;
@@ -142,4 +143,30 @@ function getData() {
     });
 }
 
+// flashlight
+const shadow = document.querySelector('.shadow');
+
+document.addEventListener('mousemove', (e) => {
+  let x = e.clientX - (document.documentElement.clientWidth * 1.5);
+  let y = e.clientY - (document.documentElement.clientHeight * 1.5);
+  shadow.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+})
+
+// night mode button
+const nightModeToggle = document.querySelector('#night-mode input[type="checkbox"]');
+const shadowOverlay = document.querySelector('.shadow');
+
+nightModeToggle.addEventListener('change', function() {
+  if (this.checked) {
+    shadowOverlay.style.display = 'block';
+  } else {
+    shadowOverlay.style.display = 'none';
+  }
+});
+
+if (nightModeToggle.checked) {
+  shadowOverlay.style.display = 'block';
+} else {
+  shadowOverlay.style.display = 'none';
+}
 
